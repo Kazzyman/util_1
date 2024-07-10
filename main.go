@@ -19,6 +19,7 @@ var fileTypeCounts = map[string]int{
 	"aiff":  0,
 	"alac":  0,
 	"mp4":   0,
+	"m4p":   0, //
 	"m4v":   0,
 	"mov":   0,
 	"avi":   0,
@@ -95,6 +96,11 @@ func main() {
 			case ".mp4":
 				fileTypeCounts["mp4"]++
 				fmt.Printf("pathName of %smp4%s file: %s\n\n", colorCyan, colorReset, path)
+
+			case ".m4p":
+				fmt.Printf("pathName of %sm4p%s file: %s\n\n", colorCyan, colorReset, path)
+				fileTypeCounts["m4p"]++
+
 			case ".m4v":
 				fileTypeCounts["m4v"]++
 				fmt.Printf("pathName of %sm4v%s file: %s\n\n", colorCyan, colorReset, path)
